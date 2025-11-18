@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "question": "Do Your Toys Meet Safety Regulations And Are They Safe?",
+    "answer": "Yes! All of our toys comply with international safety standards and are tested for quality assurance to ensure your child's safety."
+  },
+  {
+    "id": 2,
+    "question": "Do You Provide Shipping To Other Countries?",
+    "answer": "Absolutely. We offer worldwide shipping with reliable international courier partners. Shipping rates vary by location."
+  },
+  {
+    "id": 3,
+    "question": "Can I Get Alerts Regarding The Launching Of New Toys Or Promotions?",
+    "answer": "Yes! Subscribe to our newsletter or follow us on social media to get instant updates about new toys and exclusive promotions."
+  },
+  {
+    "id": 4,
+    "question": "Do Large Purchases Qualify For Any Discounts?",
+    "answer": "Definitely. We offer special discounts and bulk pricing for large purchases. Please contact our sales team for details."
+  }
+]
