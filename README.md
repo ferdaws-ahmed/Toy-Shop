@@ -29,7 +29,19 @@ The main purpose of this project is to build a responsive and dynamic toy market
 
         Eye-Catchy Footer: Includes links to Terms & Conditions, Privacy Policy, and social media pages.
 
+### 🛠 Technologies Used
 
+- **React** – Frontend library for building UI
+- **Firebase** – Authentication and database management
+- **TailwindCSS** – Styling and responsive design
+- **DaisyUI** – TailwindCSS component library
+- **React Router** – Client-side routing
+- **React Toastify** – Toast notifications
+- **Swiper** – Carousel/slider functionality
+- **Framer Motion** – Animations
+- **React Helmet Async** – Manage page meta data
+- **React Fast Marquee** – Scrolling text animations
+- **Lucide React** – Icons
 
 ### NPM Packages Used
 
@@ -47,7 +59,18 @@ The main purpose of this project is to build a responsive and dynamic toy market
         12.framer-motion
         
 
+### 💻 How to Run Locally
 
+To run this project on your local machine, follow these steps:
+
+1. **Clone the repository**  
+```bash
+git clone https://github.com/ferdaws-ahmed/toy-shop.git
+
+cd toy-shop
+npm install
+npm start
+Visit http://localhost:3000  to see the project running locally.
 
 
 ## ❤️ Author
