@@ -65,11 +65,16 @@ To run this project on your local machine, follow these steps:
 
 1. **Clone the repository**  
 git clone https://github.com/ferdaws-ahmed/toy-shop.git
-
+```
 cd toy-shop
+```
+```
 npm install
+```
+```
 npm start
-Visit http://localhost:3000  to see the project running locally.
+```
+Visit: ```http://localhost:3000```  to see the project running locally.
 
 
 ## ❤️ Author
