@@ -10,6 +10,13 @@ import DetailsPage from '../Components/toyDetailPage/DetailsPage';
 import PrivateRoute from './PrivetRoutes';
 import KidsPlayZone from '../Components/KidsPlayZone/KidsPlayZone';
 import ForgetPassword from '../Components/forgetPassword/forgetPassword';
+import AllItems from '../Components/AllToys/AllItems';
+import AboutMe from '../Components/AboutMe/AboutMe';
+import Contact from '../Components/ContactUs/ContactUs';
+import TermsAndConditions from '../Components/TermsAndCondition/TermsAndCondition';
+import PrivacyPolicy from '../Components/PrivacyPolicy/PrivacyPolicy';
+
+
 
 
 const router = createBrowserRouter([
@@ -21,6 +28,27 @@ const router = createBrowserRouter([
                 path: '/',
                 Component: Home
             },
+            {
+                path:'/allToys',
+                Component: AllItems
+            },
+            {
+                path:'/about',
+                Component:AboutMe
+            },
+            {
+                path:'/contact',
+                Component: Contact
+            },
+            {
+                path:'/terms',
+                Component: TermsAndConditions
+            },
+            {
+                path:'/privacy',
+                Component: PrivacyPolicy
+            },
+           
              {
                  path: '/myprofile',
                 element: (
@@ -36,16 +64,16 @@ const router = createBrowserRouter([
              {
             path:'/details',
             element: (
-                <PrivateRoute>
+               
                     <DetailsPage></DetailsPage>
-                </PrivateRoute>
+               
             )
         },
             {
                 path: '/kidsplayzone',
-                element: <PrivateRoute>
+                element: 
                     <KidsPlayZone></KidsPlayZone>
-                </PrivateRoute>
+                
             },
              {
                 path: '/register',

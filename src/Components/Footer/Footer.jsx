@@ -1,39 +1,56 @@
-import React from "react";
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import { Link } from "react-router";
+import React, { useContext } from "react";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { ThemeContext } from '../../Components/ThemeContext/ThemeContext';
+import logo from '../../assets/logo.png';
 
 const Footer = () => {
+  const { theme } = useContext(ThemeContext);
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-white py-10 ">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 text-center">
-        
-       
-        <h2 className="text-3xl font-extrabold mb-3 tracking-wide">Toy<span className="text-yellow-300">Shop</span></h2>
-        <p className="text-sm text-gray-100 mb-6 max-w-md mx-auto">
-          Discover joy, creativity, and endless fun with our collection of toys — made for every little dreamer!
-        </p>
+    <footer className={`transition-colors duration-500 ${theme === 'dark' ? 'bg-gray-900 text-gray-300' : 'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-white'}`}>
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 py-10 flex flex-col gap-6">
 
         
-        <div className="flex justify-center gap-6 flex-wrap mb-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+
           
-          <a target="_blank" href="https://www.iubenda.com/en/help/2859-terms-and-conditions-when-are-they-needed#:~:text=%E2%80%9CTerms%20and%20Conditions%E2%80%9D%20is%20the,%E2%80%9D%20or%20%E2%80%9CLegal%20Notes%E2%80%9D." className="text-sm font-medium hover:text-yellow-300 transition-colors duration-300">Terms & Conditions</a>
-          <a target="_blank" href="https://www.privacypolicygenerator.info/" className="text-sm font-medium hover:text-yellow-300 transition-colors duration-300">Privacy Policy</a>
-          <a target="_blank" href="https://dribbble.com/tags/about-us-page" className="text-sm font-medium hover:text-yellow-300 transition-colors duration-300">About Us</a>
-          <a target="_blank" href="https://www.website.com/contact-us/?source=SC" className="text-sm font-medium hover:text-yellow-300 transition-colors duration-300">Contact</a>
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
+            <img 
+              src={logo} 
+              alt="Toy Shop Logo" 
+              className="w-16 h-16 rounded-full shadow-lg border-2 border-white/30"
+            />
+            <div className="flex flex-col items-center md:items-start">
+              <h2 className="text-2xl md:text-3xl font-extrabold">
+                Toy<span className="text-yellow-300">Shop</span>
+              </h2>
+              <p className={`max-w-md text-center md:text-left mt-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-100'}`}>
+                Discover joy, creativity, and endless fun with our collection of toys — made for every little dreamer!
+              </p>
+            </div>
+          </div>
+
+          {/* Right: Links + Social */}
+          <div className="flex flex-col md:items-end gap-4">
+            <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm font-medium">
+              <a href="/terms"  className="hover:text-yellow-300 transition-colors duration-300">Terms & Conditions</a>
+              <a href="/privacy"  className="hover:text-yellow-300 transition-colors duration-300">Privacy Policy</a>
+              <a href="/about" className="hover:text-yellow-300 transition-colors duration-300">About Us</a>
+              <a href="/contact" className="hover:text-yellow-300 transition-colors duration-300">Contact</a>
+            </div>
+
+            <div className="flex gap-3 text-xl mt-2">
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-white/20 hover:bg-blue-600/40 transition duration-300 hover:text-white"><FaFacebookF /></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-white/20 hover:bg-pink-500/40 transition duration-300 hover:text-white"><FaInstagram /></a>
+              <a href="https://www.twitter.com/" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-white/20 hover:bg-sky-400/40 transition duration-300 hover:text-white"><FaTwitter /></a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-white/20 hover:bg-red-500/40 transition duration-300 hover:text-white"><FaYoutube /></a>
+            </div>
+          </div>
         </div>
 
-        
-        <div className="flex justify-center gap-6 text-2xl mb-6">
-          <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform duration-300 hover:text-blue-200"><FaFacebook /></a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform duration-300 hover:text-pink-200"><FaInstagram /></a>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform duration-300 hover:text-sky-200"><FaTwitter /></a>
-          <a href="https://youtube.com" target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform duration-300 hover:text-red-200"><FaYoutube /></a>
-        </div>
-
-       
-        <p className="text-sm text-gray-200 border-t border-white/20 pt-4">
+        {/* Bottom Row: Copyright */}
+        <p className={`text-center text-sm mt-6 ${theme === 'dark' ? 'text-gray-500' : 'text-gray-100'}`}>
           © {year} ToyShop. All rights reserved.
         </p>
       </div>
